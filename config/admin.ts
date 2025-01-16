@@ -1,17 +1,13 @@
 export default ({ env }) => ({
   auth: {
-    secret: env('ADMIN_JWT_SECRET'),
+    secret: env("ADMIN_JWT_SECRET"), // Секрет для админки
   },
   apiToken: {
-    salt: env('API_TOKEN_SALT'),
+    salt: env("API_TOKEN_SALT"), // Соль для API токенов
   },
   transfer: {
     token: {
-      salt: env('TRANSFER_TOKEN_SALT'),
+      salt: env("TRANSFER_TOKEN_SALT"), // Соль для токенов передачи данных
     },
-  },
-  flags: {
-    nps: env.bool('FLAG_NPS', true),
-    promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
 });
